@@ -20,11 +20,12 @@ st.set_page_config(
     page_icon="🛒",
     layout="centered",
 )
-
+OPENAI_API_KEY = st.secrets('OPENAI_API_KEY')
+OPENAI_BASE_URL = st.secrets('OPENAI_BASE_URL')
 
 # Storing API credentials in environment variables
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
-os.environ["OPENAI_BASE_URL"] = OPENAI_API_BASE
+# os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+# os.environ["OPENAI_BASE_URL"] = OPENAI_API_BASE
 
 # ── LLMs ─────────────────────────────────────────────────────────────────────
 @st.cache_resource
